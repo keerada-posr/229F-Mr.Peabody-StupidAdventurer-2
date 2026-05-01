@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHP = 100;
+    public int maxHP = 200;
     public int currentHP;
     public Slider hpSlider;
 
