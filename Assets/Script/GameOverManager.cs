@@ -1,48 +1,33 @@
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class GameOverManager : MonoBehaviour
 {
     public static GameOverManager Instance;
 
-    public GameObject gameOverPanel;   // A UI Panel in your Canvas
-    public TextMeshProUGUI winnerText; // Text inside the panel
+    public GameObject player1WinCanvas;  // Drag Canvas 2 here
+    public GameObject player2WinCanvas;  // Drag Canvas 3 here
 
     void Awake()
     {
         Instance = this;
-        if (gameOverPanel != null)
-            gameOverPanel.SetActive(false);
+        player1WinCanvas.SetActive(false); // Both hidden at start
+        player2WinCanvas.SetActive(false);
     }
 
     public void PlayerDied(GameObject deadPlayer)
     {
-        string winnerName = "";
-
         if (TurnManager.Instance.player1 != null &&
             deadPlayer == TurnManager.Instance.player1.gameObject)
         {
-            winnerName = "Player 2 Wins!";
+            player2WinCanvas.SetActive(true); // P1 died = P2 wins
         }
         else if (TurnManager.Instance.player2 != null &&
                  deadPlayer == TurnManager.Instance.player2.gameObject)
         {
-            winnerName = "Player 1 Wins!";
+            player1WinCanvas.SetActive(true); // P2 died = P1 wins
         }
 
-        ShowGameOver(winnerName);
-    }
-
-    void ShowGameOver(string message)
-    {
-        if (gameOverPanel != null)
-            gameOverPanel.SetActive(true);
-
-        if (winnerText != null)
-            winnerText.text = message;
-
-        Time.timeScale = 0f; // Pause the game
+        Time.timeScale = 0f;
     }
 
     public void RestartGame()
