@@ -779,7 +779,7 @@ GameObject:
   - component: {fileID: 170220585}
   m_Layer: 0
   m_Name: nature_environment_01_14
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1001,7 +1001,7 @@ GameObject:
   - component: {fileID: 188277409}
   m_Layer: 0
   m_Name: nature_environment_01_48 (10)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1144,7 +1144,7 @@ GameObject:
   - component: {fileID: 189042527}
   m_Layer: 0
   m_Name: nature_environment_01_35
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2421,7 +2421,7 @@ GameObject:
   - component: {fileID: 365181431}
   m_Layer: 0
   m_Name: nature_environment_01_47 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2551,6 +2551,54 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 1
+--- !u!1 &370178656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 370178658}
+  - component: {fileID: 370178657}
+  m_Layer: 0
+  m_Name: TurnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &370178657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370178656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d44ebc9a0e27e5f4eb54180ee949de60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  player1: {fileID: 1381280740}
+  player2: {fileID: 1417989411}
+  isPlayer1Turn: 1
+  isSwitching: 0
+--- !u!4 &370178658
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370178656}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &384737585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2559,6 +2607,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2076869429338405281, guid: 834fc55727ba6d145b6e45b7600c129f, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5245347269399447589, guid: 834fc55727ba6d145b6e45b7600c129f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.01
@@ -2603,10 +2655,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8387536818648720341, guid: 834fc55727ba6d145b6e45b7600c129f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8387536818648720341, guid: 834fc55727ba6d145b6e45b7600c129f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1417989412}
+    - targetCorrespondingSourceObject: {fileID: 6147131168327876856, guid: 834fc55727ba6d145b6e45b7600c129f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1594804973}
+    - targetCorrespondingSourceObject: {fileID: 6147131168327876856, guid: 834fc55727ba6d145b6e45b7600c129f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1594804972}
   m_SourcePrefab: {fileID: 100100000, guid: 834fc55727ba6d145b6e45b7600c129f, type: 3}
 --- !u!1 &389569831
 GameObject:
@@ -2621,7 +2686,7 @@ GameObject:
   - component: {fileID: 389569834}
   m_Layer: 0
   m_Name: nature_environment_01_5
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2765,7 +2830,7 @@ GameObject:
   - component: {fileID: 390062175}
   m_Layer: 0
   m_Name: nature_environment_01_5
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2987,6 +3052,42 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &397123129 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1726637212346065908, guid: 2a76e7dcbd428ae4499a5fdfedbe9984, type: 3}
+  m_PrefabInstance: {fileID: 1757038471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &397123132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397123129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ab7a1a383c5e74d8d31f04626ab0fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Aim
+  Direction: {x: 0, y: 0}
+  force: 12
+  PointPrefab: {fileID: 285425219760136622, guid: 06411768a07a36e4a94607d03761ddda, type: 3}
+  Points: []
+  numberOfPoints: 10
+--- !u!114 &397123133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397123129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8f165dcad1b41648b6e38eb5135e003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  Arrow: {fileID: 1357235234114388297, guid: 79a8e326f69252c469085957760052de, type: 3}
+  LaunchForce: 15
 --- !u!1 &436953628
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,7 +3192,7 @@ GameObject:
   - component: {fileID: 469563486}
   m_Layer: 0
   m_Name: nature_environment_01_53
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3234,7 +3335,7 @@ GameObject:
   - component: {fileID: 472700283}
   m_Layer: 0
   m_Name: nature_environment_01_3
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3650,7 +3751,7 @@ GameObject:
   - component: {fileID: 513180112}
   m_Layer: 0
   m_Name: nature_environment_01_2 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3793,7 +3894,7 @@ GameObject:
   - component: {fileID: 518087501}
   m_Layer: 0
   m_Name: nature_environment_01_51
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3885,7 +3986,7 @@ GameObject:
   - component: {fileID: 527800018}
   m_Layer: 0
   m_Name: nature_environment_01_48 (9)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4028,7 +4129,7 @@ GameObject:
   - component: {fileID: 555070044}
   m_Layer: 0
   m_Name: nature_environment_01_47 (6)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4171,7 +4272,7 @@ GameObject:
   - component: {fileID: 584593770}
   m_Layer: 0
   m_Name: nature_environment_01_5 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4587,7 +4688,7 @@ GameObject:
   - component: {fileID: 647456962}
   m_Layer: 0
   m_Name: nature_environment_01_47 (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5003,7 +5104,7 @@ GameObject:
   - component: {fileID: 662205989}
   m_Layer: 0
   m_Name: nature_environment_01_34
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5329,7 +5430,7 @@ GameObject:
   - component: {fileID: 687823415}
   m_Layer: 0
   m_Name: nature_environment_01_48 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5563,7 +5664,7 @@ GameObject:
   - component: {fileID: 725989300}
   m_Layer: 0
   m_Name: nature_environment_01_47 (9)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5979,7 +6080,7 @@ GameObject:
   - component: {fileID: 734664527}
   m_Layer: 0
   m_Name: nature_environment_01_48 (11)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6122,7 +6223,7 @@ GameObject:
   - component: {fileID: 763272659}
   m_Layer: 0
   m_Name: nature_environment_01_15 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6265,7 +6366,7 @@ GameObject:
   - component: {fileID: 763941011}
   m_Layer: 0
   m_Name: nature_environment_01_48 (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6408,7 +6509,7 @@ GameObject:
   - component: {fileID: 802143396}
   m_Layer: 0
   m_Name: nature_environment_01_15
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6641,7 +6742,7 @@ GameObject:
   - component: {fileID: 829436326}
   m_Layer: 0
   m_Name: nature_environment_01_50
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6732,7 +6833,7 @@ GameObject:
   - component: {fileID: 835619330}
   m_Layer: 0
   m_Name: nature_environment_01_52
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6915,7 +7016,7 @@ GameObject:
   - component: {fileID: 855935166}
   m_Layer: 0
   m_Name: nature_environment_01_47
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7058,7 +7159,7 @@ GameObject:
   - component: {fileID: 874837409}
   m_Layer: 0
   m_Name: nature_environment_01_15 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7201,7 +7302,7 @@ GameObject:
   - component: {fileID: 886245489}
   m_Layer: 0
   m_Name: nature_environment_01_54
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7845,7 +7946,7 @@ GameObject:
   - component: {fileID: 1008468961}
   m_Layer: 0
   m_Name: nature_environment_01_48 (7)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8079,7 +8180,7 @@ GameObject:
   - component: {fileID: 1056063068}
   m_Layer: 0
   m_Name: nature_environment_01_2 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8314,7 +8415,7 @@ GameObject:
   - component: {fileID: 1091257175}
   m_Layer: 0
   m_Name: nature_environment_01_15 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8639,7 +8740,7 @@ GameObject:
   - component: {fileID: 1125650074}
   m_Layer: 0
   m_Name: nature_environment_01_48 (6)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8873,7 +8974,7 @@ GameObject:
   - component: {fileID: 1161871832}
   m_Layer: 0
   m_Name: nature_environment_01_14 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9605,7 +9706,7 @@ GameObject:
   - component: {fileID: 1214532305}
   m_Layer: 0
   m_Name: nature_environment_01_31
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9749,7 +9850,7 @@ GameObject:
   - component: {fileID: 1216356486}
   m_Layer: 0
   m_Name: nature_environment_01_15
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9892,7 +9993,7 @@ GameObject:
   - component: {fileID: 1256002611}
   m_Layer: 0
   m_Name: nature_environment_01_14 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10253,7 +10354,7 @@ GameObject:
   - component: {fileID: 1311675337}
   m_Layer: 0
   m_Name: nature_environment_01_2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10579,7 +10680,7 @@ GameObject:
   - component: {fileID: 1324472631}
   m_Layer: 0
   m_Name: nature_environment_01_5 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10903,7 +11004,52 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
+--- !u!4 &1381280740 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 173887063260106760, guid: 2a76e7dcbd428ae4499a5fdfedbe9984, type: 3}
+  m_PrefabInstance: {fileID: 1757038471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1381280741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381280736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6a3d51c3392a74d9441b99c8120f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  maxHP: 100
+  currentHP: 0
+  hpSlider: {fileID: 0}
+--- !u!1 &1417989408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8387536818648720341, guid: 834fc55727ba6d145b6e45b7600c129f, type: 3}
+  m_PrefabInstance: {fileID: 384737585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1417989411 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5245347269399447589, guid: 834fc55727ba6d145b6e45b7600c129f, type: 3}
+  m_PrefabInstance: {fileID: 384737585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1417989412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417989408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6a3d51c3392a74d9441b99c8120f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHP: 100
+  currentHP: 0
+  hpSlider: {fileID: 0}
 --- !u!1 &1432193230
 GameObject:
   m_ObjectHideFlags: 0
@@ -10917,7 +11063,7 @@ GameObject:
   - component: {fileID: 1432193233}
   m_Layer: 0
   m_Name: nature_environment_01_49
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11242,7 +11388,7 @@ GameObject:
   - component: {fileID: 1451478398}
   m_Layer: 0
   m_Name: nature_environment_01_48 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11476,7 +11622,7 @@ GameObject:
   - component: {fileID: 1538944185}
   m_Layer: 0
   m_Name: nature_environment_01_33
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11802,7 +11948,7 @@ GameObject:
   - component: {fileID: 1567252229}
   m_Layer: 0
   m_Name: nature_environment_01_5 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11946,7 +12092,7 @@ GameObject:
   - component: {fileID: 1569358098}
   m_Layer: 0
   m_Name: nature_environment_01_32
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12214,6 +12360,42 @@ Transform:
   - {fileID: 1137501196}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1594804969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6147131168327876856, guid: 834fc55727ba6d145b6e45b7600c129f, type: 3}
+  m_PrefabInstance: {fileID: 384737585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1594804972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594804969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8f165dcad1b41648b6e38eb5135e003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shoot
+  Arrow: {fileID: 8736144833094749527, guid: 3b943a9dc633c85419712a1461908d2b, type: 3}
+  LaunchForce: 15
+--- !u!114 &1594804973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594804969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ab7a1a383c5e74d8d31f04626ab0fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Aim
+  Direction: {x: 0, y: 0}
+  force: 12
+  PointPrefab: {fileID: 285425219760136622, guid: 932a604a9bbea8d4095e51acc89d3709, type: 3}
+  Points: []
+  numberOfPoints: 10
 --- !u!1 &1596061984
 GameObject:
   m_ObjectHideFlags: 0
@@ -12227,7 +12409,7 @@ GameObject:
   - component: {fileID: 1596061987}
   m_Layer: 0
   m_Name: nature_environment_01_4
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12445,7 +12627,7 @@ GameObject:
   - component: {fileID: 1614920606}
   m_Layer: 0
   m_Name: nature_environment_01_47 (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12770,7 +12952,7 @@ GameObject:
   - component: {fileID: 1694800023}
   m_Layer: 0
   m_Name: nature_environment_01_47 (8)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12913,7 +13095,7 @@ GameObject:
   - component: {fileID: 1702100215}
   m_Layer: 0
   m_Name: nature_environment_01_48 (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13368,6 +13550,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 248244871983915960, guid: 2a76e7dcbd428ae4499a5fdfedbe9984, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4448651635688679292, guid: 2a76e7dcbd428ae4499a5fdfedbe9984, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -13391,6 +13577,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 248244871983915960, guid: 2a76e7dcbd428ae4499a5fdfedbe9984, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1381280737}
+    - targetCorrespondingSourceObject: {fileID: 248244871983915960, guid: 2a76e7dcbd428ae4499a5fdfedbe9984, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1381280741}
+    - targetCorrespondingSourceObject: {fileID: 1726637212346065908, guid: 2a76e7dcbd428ae4499a5fdfedbe9984, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 397123132}
+    - targetCorrespondingSourceObject: {fileID: 1726637212346065908, guid: 2a76e7dcbd428ae4499a5fdfedbe9984, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 397123133}
   m_SourcePrefab: {fileID: 100100000, guid: 2a76e7dcbd428ae4499a5fdfedbe9984, type: 3}
 --- !u!1 &1758031219
 GameObject:
@@ -13405,7 +13600,7 @@ GameObject:
   - component: {fileID: 1758031222}
   m_Layer: 0
   m_Name: nature_environment_01_48
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14094,7 +14289,7 @@ GameObject:
   - component: {fileID: 1909863439}
   m_Layer: 0
   m_Name: nature_environment_01_48 (8)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14237,7 +14432,7 @@ GameObject:
   - component: {fileID: 1912956538}
   m_Layer: 0
   m_Name: nature_environment_01_48 (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14380,7 +14575,7 @@ GameObject:
   - component: {fileID: 1925119955}
   m_Layer: 0
   m_Name: nature_environment_01_47 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14703,6 +14898,8 @@ GameObject:
   - component: {fileID: 1935889131}
   - component: {fileID: 1935889130}
   - component: {fileID: 1935889129}
+  - component: {fileID: 1935889133}
+  - component: {fileID: 1935889132}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -14784,6 +14981,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1935889132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935889128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b39332f46b11af74e93b28ca04e1f097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraController
+  player: {fileID: 1381280740}
+  bot: {fileID: 1417989411}
+  smoothSpeed: 5
+--- !u!114 &1935889133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935889128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &1936267842
 GameObject:
   m_ObjectHideFlags: 0
@@ -14946,7 +15202,7 @@ GameObject:
   - component: {fileID: 1958749708}
   m_Layer: 0
   m_Name: nature_environment_01_47 (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15722,7 +15978,7 @@ GameObject:
   - component: {fileID: 2018235829}
   m_Layer: 0
   m_Name: nature_environment_01_47 (7)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15865,7 +16121,7 @@ GameObject:
   - component: {fileID: 2024386426}
   m_Layer: 0
   m_Name: nature_environment_01_30
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16673,3 +16929,4 @@ SceneRoots:
   - {fileID: 1187420011}
   - {fileID: 176958294}
   - {fileID: 1945080244}
+  - {fileID: 370178658}
