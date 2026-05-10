@@ -1,21 +1,18 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHP = 200;
+    public int maxHP = 8;          // Change this to however many hearts you want
     public int currentHP;
-    public Slider hpSlider;
+    public HealthUI healthUI;      // Drag the HealthUI object here in Inspector
 
     void Start()
     {
         currentHP = maxHP;
 
-        if (hpSlider != null)
-        {
-            hpSlider.maxValue = maxHP;
-            hpSlider.value = currentHP;
-        }
+        // Tell the UI how many hearts to create
+        if (healthUI != null)
+            healthUI.SetMaxHealth(maxHP);
     }
 
     public void TakeDamage(int amount)
@@ -23,8 +20,9 @@ public class PlayerHealth : MonoBehaviour
         currentHP -= amount;
         currentHP = Mathf.Clamp(currentHP, 0, maxHP);
 
-        if (hpSlider != null)
-            hpSlider.value = currentHP;
+        // Update hearts display every time damage is taken
+        if (healthUI != null)
+            healthUI.UpdateHealth(currentHP);
 
         if (currentHP <= 0)
             Die();
@@ -33,7 +31,6 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log(gameObject.name + " has been destroyed!");
-        // Notify TurnManager so the game knows someone died
         GameOverManager.Instance?.PlayerDied(gameObject);
         gameObject.SetActive(false);
     }
